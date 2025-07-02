@@ -1,0 +1,17 @@
+<div class="devotional-card-container"  [style.display]="isClicked() ? 'block' : 'none'">
+   
+<div class="devotional-card">
+    <h2 class="devotional-title">{{ devotionalService.getDevotional().title }}</h2>
+    <p class="devotional-date">{{ devotionalService.getDevotional().date }}</p>
+    <p class="devotional-verse">“{{ devotionalService.getDevotional().verse }}”</p>
+    <p class="devotional-scripture">{{ devotionalService.getDevotional().scripture }}</p>
+    <p class="devotional-content">{{ devotionalService.getDevotional().content }}</p>
+</div>
+
+<div class="button-group">
+   <button class="home-button" (click)="HomeClicked()">HOME</button>
+   <button class="home-button" (click)="PrayerReqClicked()">🙏 My Prayer Requests</button>
+</div>
+
+</div>
+

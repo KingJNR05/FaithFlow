@@ -1,0 +1,16 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()"> 
+
+    <form (ngSubmit)="onSubmit()">
+        <label for="prayerRequest">Prayer Request: </label>
+            <input type="text" name="prayerRequest" [(ngModel)]="prayerRequest" />
+        <br>
+        <label for="prayerDate">Prayer Date: </label>
+            <input type="date" name="prayerDate" [(ngModel)]="date"/>
+                                    
+        <br>
+            <button type="submit">Add</button>
+    </form>
+
+  </div>
+</div>

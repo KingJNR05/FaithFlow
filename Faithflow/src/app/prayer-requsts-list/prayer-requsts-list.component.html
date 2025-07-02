@@ -1,0 +1,35 @@
+@if(isClicked()){
+
+<div class="prayer-requests-container">
+    
+@for (prayerReq of prayerRequests(); track prayerReq.id) {
+
+<div class="prayer-card">
+  <div class="prayer-header">
+    <h3 class="prayer-text">{{ prayerReq.prayer }}</h3>
+    <span class="prayer-date">{{ prayerReq.date }}</span>
+  </div>
+
+  <div class="prayer-status">
+    <label>
+      <input type="checkbox"   />
+      <span>Answered</span>
+    </label>
+  </div>
+
+ </div>
+
+}
+ 
+  <div class="prayer-buttons">
+    <button class="prayer-btn" (click)="addNew()">➕ Add New Request</button>
+    <button class="prayer-btn danger">🗑️ Clear All</button>
+  </div>
+
+</div>
+   
+
+  @if(isModalOn()){
+      <app-prayer-req-form-component (close)="setModal($event)"/>
+  }
+}
