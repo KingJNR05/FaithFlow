@@ -10,6 +10,14 @@ import { PrayerRequestsService } from '../PrayerRequestsService';
 })
 export class PrayerRequstsListComponent {
 
+
+  prayerRequestsService = inject(PrayerRequestsService)
+
+
+  clearPrayerRequests() {
+    this.prayerRequestsService.clearPrayerRequests()
+  }
+
   isClicked = input.required<boolean>()
 
  
@@ -24,18 +32,24 @@ addNew() {
  
 }
 
+prayerRequests = this.prayerRequestsService.getPrayerRequests()
+
+deletePrayerRequest(id:string){
+  this.prayerRequestsService.deletePrayerRequest(id)
+  console.log("should delete")
+}
+
   // prayerRequests : PrayerRequest[] = [];
-
-
-
-
   // addPrayerRequest(prayerRequest:PrayerRequest){
   //   this.prayerRequests.push(prayerRequest);
   // }
 
-  prayerRequestsService = inject(PrayerRequestsService)
+ 
 
-  prayerRequests = this.prayerRequestsService.getPrayerRequests()
+  
+ 
+
+ 
 
 
 }

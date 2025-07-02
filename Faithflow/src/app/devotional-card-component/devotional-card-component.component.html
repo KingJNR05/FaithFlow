@@ -1,4 +1,4 @@
-<div class="devotional-card-container"  [style.display]="isClicked() ? 'block' : 'none'">
+
    
 <div class="devotional-card">
     <h2 class="devotional-title">{{ devotionalService.getDevotional().title }}</h2>
@@ -9,9 +9,9 @@
 </div>
 
 <div class="button-group">
-   <button class="home-button" (click)="HomeClicked()">HOME</button>
-   <button class="home-button" (click)="PrayerReqClicked()">🙏 My Prayer Requests</button>
+   <button class="home-button" routerLink="">HOME</button>
+   <button class="home-button" routerLink="prayerRequests">🙏 My Prayer Requests</button>
 </div>
 
-</div>
+
 

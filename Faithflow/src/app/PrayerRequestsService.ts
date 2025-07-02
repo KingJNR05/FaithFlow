@@ -1,5 +1,6 @@
-import { Injectable, signal } from "@angular/core";
+import { Injectable, Signal, signal } from "@angular/core";
 import { PrayerRequest } from "./PrayerRequest";
+
 @Injectable({
     providedIn:"root"
 })
@@ -17,4 +18,13 @@ export class PrayerRequestsService{
     return this.prayerRequests;
    }
 
+   clearPrayerRequests(){
+    this.prayerRequests.set([]);
+   }
+
+   deletePrayerRequest(id: string){
+   setTimeout(()=> this.prayerRequests.update((oldRequests)=> [...oldRequests.filter((request)=> request.id !== id)]))
+   
+
+   }
 }

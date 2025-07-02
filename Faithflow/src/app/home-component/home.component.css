@@ -30,7 +30,7 @@
   max-width: 300px;
 }
 
-.home-button {
+.button {
   padding: 16px 24px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -43,7 +43,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.home-button:hover {
+.button:hover {
   background-color: #4a148c;
   transform: translateY(-2px);
 }
