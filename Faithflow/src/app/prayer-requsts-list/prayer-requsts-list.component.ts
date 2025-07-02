@@ -1,7 +1,7 @@
 import { Component, inject, input, signal } from '@angular/core';
-import { PrayerRequest } from '../PrayerRequest';
 import { PrayerReqFormComponentComponent } from '../prayer-req-form-component/prayer-req-form-component.component';
 import { PrayerRequestsService } from '../PrayerRequestsService';
+
 @Component({
   selector: 'app-prayer-requsts-list',
   imports: [PrayerReqFormComponentComponent],
@@ -36,7 +36,7 @@ prayerRequests = this.prayerRequestsService.getPrayerRequests()
 
 deletePrayerRequest(id:string){
   this.prayerRequestsService.deletePrayerRequest(id)
-  console.log("should delete")
+  
 }
 
   // prayerRequests : PrayerRequest[] = [];
